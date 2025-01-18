@@ -9,7 +9,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Frontend URL
+    origin: 'https://123-weather-react.netlify.app/', // Frontend URL
     methods: ['GET', 'POST'], // Allowed methods
   }));
 
@@ -26,6 +26,6 @@ app.get('/weather', async (req, res) => {
     }
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
     console.log(`Server running on http://localhost:${port}`);
   });

@@ -11,7 +11,7 @@ export default function App() {
   async function fetchWeatherData(param) {
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:5000/weather?city=${param}`);
+      const response = await fetch(`https://weather-api-request.onrender.com/weather?city=${param}`);
       const data = await response.json();
       console.log(data, 'data');
 
