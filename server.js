@@ -9,7 +9,7 @@ const app = express();
 const port = 5000;
 
 app.use(cors({
-    origin: 'https://123-weather-react.netlify.app/', // Frontend URL
+    origin: 'https://123-weather-react.netlify.app', // Frontend URL
     methods: ['GET', 'POST'], // Allowed methods
   }));
 
